@@ -43,6 +43,7 @@ pipeline {
         }
         steps {
           container('nodejs') {
+              sh 'env'
             // ensure we're not on a detached head
             sh "git checkout master"
             // until we switch to the new kubernetes / jenkins credential implementation use git credentials store
